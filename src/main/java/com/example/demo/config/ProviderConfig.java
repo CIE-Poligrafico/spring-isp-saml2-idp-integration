@@ -23,19 +23,19 @@ public class ProviderConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     RelyingPartyRegistrationRepository relyingPartyRegistrationRepository;
     
-    @Bean PKIXTrustEvaluator CertPathPKIXTrustEvaluator() {
-    	org.opensaml.security.x509.impl.CertPathPKIXTrustEvaluator certPathPKIXTrustEvaluator=
-    	
-    			new org.opensaml.security.x509.impl.CertPathPKIXTrustEvaluator();
-    	CertPathPKIXValidationOptions 
-    	certPathPKIXValidationOptions=
-    			new CertPathPKIXValidationOptions();
-    	//certPathPKIXValidationOptions.setForceRevocationEnabled(true);
-    //	certPathPKIXValidationOptions.setRevocationEnabled(true);
-    	certPathPKIXTrustEvaluator.setPKIXValidationOptions(certPathPKIXValidationOptions);
-    	certPathPKIXValidationOptions.setAnyPolicyInhibit(true);
-    	return certPathPKIXTrustEvaluator;
-    }
+//    @Bean PKIXTrustEvaluator CertPathPKIXTrustEvaluator() {
+//    	org.opensaml.security.x509.impl.CertPathPKIXTrustEvaluator certPathPKIXTrustEvaluator=
+//    	
+//    			new org.opensaml.security.x509.impl.CertPathPKIXTrustEvaluator();
+//    	CertPathPKIXValidationOptions 
+//    	certPathPKIXValidationOptions=
+//    			new CertPathPKIXValidationOptions();
+//    	//certPathPKIXValidationOptions.setForceRevocationEnabled(true);
+//    //	certPathPKIXValidationOptions.setRevocationEnabled(true);
+//    	certPathPKIXTrustEvaluator.setPKIXValidationOptions(certPathPKIXValidationOptions);
+//    	certPathPKIXValidationOptions.setAnyPolicyInhibit(true);
+//    	return certPathPKIXTrustEvaluator;
+//    }
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
