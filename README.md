@@ -98,6 +98,8 @@ x.s.s.i.ExplicitKeySignatureTrustEngine : Attempting to verify signature using t
 
 x.s.s.i.ExplicitKeySignatureTrustEngine : Failed to verify signature using either KeyInfo-derived or directly trusted credentials
 o.o.s.s.a.SAML20AssertionValidator       : Signature of Assertion '_e047526db37ed04568e3cce2d2b4765b5dac0ecc55' from Issuer 'http://localhost:8080/simplesaml/saml2/idp/metadata.php' was not valid
+
+Il certificato dell'Idp è quello che nel container trovasi in: /var/www/simplesamlphp/cert/server.crt
  
  
  

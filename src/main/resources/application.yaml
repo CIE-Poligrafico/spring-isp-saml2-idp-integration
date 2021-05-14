@@ -26,6 +26,9 @@ spring:
                 - private-key-location: "classpath:credentials/private.key"
                   certificate-location: "classpath:credentials/public.crt"
             identityprovider:
+              verification:
+                credentials:
+                  - certificate-location: "classpath:credentials/idpcert.crt"
               entity-id: http://host.docker.internal:8081/interni-sp/saml2/service-provider-metadata/internilogs
               singlesignon:
                 sign-request: false
