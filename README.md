@@ -83,12 +83,19 @@ o.a.xml.security.signature.Reference     : Verification successful for URI "#_e0
 o.a.xml.security.signature.Manifest      : The Reference has Type 
  
 SantuarioSignatureValidationProviderImpl : Signature validated with key from supplied credential
+
 o.o.x.s.s.impl.BaseSignatureTrustEngine  : Signature validation using candidate credential was successful
+
 o.o.x.s.s.impl.BaseSignatureTrustEngine  : Successfully verified signature using KeyInfo-derived credential
+
 o.o.x.s.s.impl.BaseSignatureTrustEngine  : Attempting to establish trust of KeyInfo-derived credential
+
 o.o.x.s.s.impl.BaseSignatureTrustEngine  : Failed to establish trust of KeyInfo-derived credential
-o.o.x.s.s.impl.BaseSignatureTrustEngine  : Failed to verify signature and/or establish trust using any KeyInfo-derived credentials
+
+o.o.x.s.s.impl.BaseSignatureTrustEngine  : Failed to verify signature and/or establish trust using any KeyInfo-derived 
+credentials
 x.s.s.i.ExplicitKeySignatureTrustEngine : Attempting to verify signature using trusted credentials
+
 x.s.s.i.ExplicitKeySignatureTrustEngine : Failed to verify signature using either KeyInfo-derived or directly trusted credentials
 o.o.s.s.a.SAML20AssertionValidator       : Signature of Assertion '_e047526db37ed04568e3cce2d2b4765b5dac0ecc55' from Issuer 'http://localhost:8080/simplesaml/saml2/idp/metadata.php' was not valid
  
