@@ -27,16 +27,16 @@ public class SamlServiceProviderApplication {
 			e.printStackTrace();
 		}
 		 
-		ConfigurableApplicationContext configurableApplicationContext=SpringApplication.run(SamlServiceProviderApplication.class, args);
-		PKIXTrustEngine certPathPKIXTrustEvaluator=
-		configurableApplicationContext.getBean(PKIXTrustEngine.class);
-		try {
-			myHost = InetAddress.getLocalHost();
-		} catch (UnknownHostException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		System.out.println(myHost.getHostName());
+ConfigurableApplicationContext configurableApplicationContext=SpringApplication.run(SamlServiceProviderApplication.class, args);
+//		PKIXTrustEngine certPathPKIXTrustEvaluator=
+//		configurableApplicationContext.getBean(PKIXTrustEngine.class);
+//		try {
+//			myHost = InetAddress.getLocalHost();
+//		} catch (UnknownHostException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		System.out.println(myHost.getHostName());
 	}
 
 }
