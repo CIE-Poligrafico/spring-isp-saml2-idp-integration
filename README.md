@@ -12,10 +12,13 @@ http://localhost:8080/simplesaml/module.php/core/frontpage_welcome.php
 
 Users caricati 2:
 
- usr:user1 
- pass:user1pass 
- usr:user2
- pass:user2pass
+ 
+ usr=user1 
+ pass=user1pass 
+ 
+ 
+ usr=user2
+ pass=user2pass
  
  2)Connettersi alla index dello Spring Isp all'indirizzo:
  
@@ -29,6 +32,9 @@ Users caricati 2:
  Invalid signature for SAML Response [_3190e86058c80e25b042847f410b268e533f227bbf]
  
  Dai logs ISP si evince che la asserzione dell'Idp viene correttamente validata(Successfully verified signature using KeyInfo-derived credential) ma il problema è il trust(Failed to establish trust of KeyInfo-derived credential):
+ 
+ Assertion:
+ 
  
  <saml:Assertion
     xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" ID="_e047526db37ed04568e3cce2d2b4765b5dac0ecc55" IssueInstant="2021-05-14T13:50:25Z" Version="2.0">
@@ -67,6 +73,10 @@ Users caricati 2:
         </saml:Attribute>
     </saml:AttributeStatement>
 </saml:Assertion>
+ 
+ 
+ Logs:
+ 
  
   
 o.a.xml.security.signature.Reference     : Verification successful for URI "#_e047526db37ed04568e3cce2d2b4765b5dac0ecc55"
