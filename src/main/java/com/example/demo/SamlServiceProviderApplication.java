@@ -16,8 +16,8 @@ public class SamlServiceProviderApplication {
 
 	public static void main(String[] args) {
 		ConfigurableApplicationContext configurableApplicationContext=	SpringApplication.run(SamlServiceProviderApplication.class, args);
-BaseSignatureTrustEngine certPathPKIXTrustEvaluator=
-		configurableApplicationContext.getBean(BaseSignatureTrustEngine.class);
+//BaseSignatureTrustEngine certPathPKIXTrustEvaluator=
+//		configurableApplicationContext.getBean(BaseSignatureTrustEngine.class);
 		
 	}
 
