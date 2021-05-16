@@ -92,7 +92,7 @@ o.o.x.s.s.impl.BaseSignatureTrustEngine  : Attempting to establish trust of KeyI
 
 o.o.x.s.s.impl.BaseSignatureTrustEngine  : Failed to establish trust of KeyInfo-derived credential
 
-o.o.x.s.s.impl.BaseSignatureTrustEngine  : Failed to verify signature and/or establish trust using any KeyInfo-derived 
+o.o.x.s.s.impl.c  : Failed to verify signature and/or establish trust using any KeyInfo-derived 
 credentials
 x.s.s.i.ExplicitKeySignatureTrustEngine : Attempting to verify signature using trusted credentials
 
