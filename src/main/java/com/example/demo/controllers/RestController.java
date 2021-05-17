@@ -34,7 +34,7 @@ public class RestController {
 	  @Qualifier("frMessageSourceAccessor")
 	   private MessageSourceAccessor frMessageSourceAccessor;
 	
-	 @GetMapping("/logs")
+	 @GetMapping("/cielogs")
 	 public String logs(){
 		 return "index";
 	 }
