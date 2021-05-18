@@ -5,7 +5,14 @@
     </head>
     <body style="background-color: aquamarine;">
         <h1>SAML2 Login Example with Spring Security 5.2</h1>
-        <div>You are logged in as <span sec:authentication="name"></span></div>
+       
+        <div><b>You are logged in as</b>: <span sec:authentication="principal.attributes[email]"></span></div>
+         <div>Your name auth is <span sec:authentication="name"></span></div>
+        <div>principal: <span sec:authentication="principal"></span></div>
+        <div>principal.name: <span sec:authentication="principal.name"></span></div>
+        <div>principal.attributes: <span sec:authentication="principal.attributes"></span></div>
+<!--         <div>principal.attributes: <span sec:authentication="principal.attributes"></span></div> -->
+<!--         <div>principal.attributes: <span sec:authentication="principal.attributes"></span></div> -->
         <div>
             <form th:action="@{/logout}" method="post">
                 <input type="submit" value="Logout" />
