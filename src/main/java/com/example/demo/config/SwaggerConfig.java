@@ -19,7 +19,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 @Configuration
 //@EnableSwagger
-public class SwaggerConfig extends WebMvcConfigurationSupport 
+public class SwaggerConfig 
+//extends WebMvcConfigurationSupport 
 //implements WebMvcConfigurer 
 {
 //	 private  String baseUrl;
@@ -42,13 +43,13 @@ public class SwaggerConfig extends WebMvcConfigurationSupport
 //	    registry.addViewController(baseUrl + "/swagger-ui/")
 //	        .setViewName("forward:" + baseUrl + "/swagger-ui/index.html");
 //	  }
-	  @Override
-	    protected void addResourceHandlers(ResourceHandlerRegistry registry) {
-	        registry.addResourceHandler("swagger-ui.html")
-	                .addResourceLocations("classpath:/META-INF/resources/");
-	        registry.addResourceHandler("/webjars/**")
-	                .addResourceLocations("classpath:/META-INF/resources/webjars/");
-	    }
+//	  @Override
+//	    protected void addResourceHandlers(ResourceHandlerRegistry registry) {
+//	        registry.addResourceHandler("swagger-ui.html")
+//	                .addResourceLocations("classpath:/META-INF/resources/");
+//	        registry.addResourceHandler("/webjars/**")
+//	                .addResourceLocations("classpath:/META-INF/resources/webjars/");
+//	    }
 	  @Bean
 		public Docket api() { 
 		  // http://localhost:8080/swagger-ui.html
