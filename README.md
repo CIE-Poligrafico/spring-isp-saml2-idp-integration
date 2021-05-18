@@ -32,15 +32,11 @@ mediante il comando docker:
 
 sudo docker run --name=testsamlidp -p 8080:8080 -p 8443:8443 -e SIMPLESAMLPHP_SP_ENTITY_ID=http://10.128.0.11:8080/interni-sp/saml2/service-provider-metadata/internilogs -e SIMPLESAMLPHP_SP_ASSERTION_CONSUMER_SERVICE=http://10.128.0.11:8080/interni-sp/login/saml2/sso/internilogs -d kristophjunge/test-saml-idp
 
-ed ovviamente sulla macchina 10.128.0.10
+ed ovviamente sulla macchina dell'ISP  10.128.0.10
 
-bisogna lanciare il comando:
+bisogna lanciare la shell comando:
 
-mvn package
-mvn spring-boot:run -Dspring-boot.run.profiles=default 
-
-nella cartella dove si è fatta la clone(Oppure build e run del DockerFile dopo mvn package).
-
+/home/azureuser/samlisp/spring-isp-saml2-idp-integration/server.sh
 
 
 Users caricati 2:
