@@ -53,9 +53,11 @@ Users caricati 2:
  usr=user2
  pass=user2pass
  
-Per docker profile la documentazione swagger si trova all'indirizzo:
+Per docker profile la documentazione swagger si trova agli indirizzi:
 
 http://host.docker.internal:8081/interni-sp/swagger-ui/
+
+http://10.128.0.11:8080/interni-sp/swagger-ui/
  
  
  
