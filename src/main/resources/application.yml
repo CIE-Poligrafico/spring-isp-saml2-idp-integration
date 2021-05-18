@@ -21,8 +21,7 @@ spring:
               entity-id: http://localhost:8080/simplesaml/saml2/idp/metadata.php
               singlesignon:
                 sign-request: true
-      #          url: http://host.docker.internal:8081/interni-sp/login/saml2/sso/internilogs
-     #           url: http://localhost:8083/auth/realms/master/protocol/saml
+     
                 url: http://localhost:8080/simplesaml/saml2/idp/SSOService.php
               #metadata-uri: http://localhost:8083/auth/realms/master/protocol/saml/descriptor
             #    metadata-uri: http://localhost:8080/simplesaml/saml2/idp/metadata.php
@@ -49,7 +48,7 @@ spring:
               entity-id: http://10.128.0.10:8080/simplesaml/saml2/idp/metadata.php
               singlesignon:
                 sign-request: true
-      #          url: http://host.docker.internal:8081/interni-sp/login/saml2/sso/internilogs
+     
      #           url: http://localhost:8083/auth/realms/master/protocol/saml
                 url: http://10.128.0.10:8080/simplesaml/saml2/idp/SSOService.php
               #metadata-uri: http://localhost:8083/auth/realms/master/protocol/saml/descriptor
