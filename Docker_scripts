@@ -7,13 +7,5 @@ docker run --name=testsamlidp -p 8080:8080 -p 8443:8443 -e SIMPLESAMLPHP_SP_ENTI
 
 192.168.65.2 localhost
 
-http://localhost:8081/interni-sp/cielogs
-
-‌http://localhost:8081/interni-sp/saml2/service-provider-metadata/internilogs
-
-‌http://localhost:8081/interni-sp/login/saml2/sso/internilogs
-
-docker build -t ispapp .
-docker run --hostname='ispapp' -p 8081:8081 --name ispidplink --link testsamlidp:idpserver -d ispapp
 
 docker run -p 8080:8080 -e KEYCLOAK_LOGLEVEL=ALL -e ROOT_LOGLEVEL=ALL -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=password jboss/keycloak -Dkeycloak.profile.feature.docker=enabled -b 0.0.0.0 
