@@ -30,7 +30,7 @@ Per il profilo default invece(Isp ed Idp in remoto) bisogna lanciare l'Idp sulla
 
 mediante il comando docker:
 
-sudo docker run --name=testsamlidp -p 8080:8080 -p 8443:8443 -e SIMPLESAMLPHP_SP_ENTITY_ID=http://10.128.0.11:8080/interni-sp/saml2/service-provider-metadata/internilogs -e SIMPLESAMLPHP_SP_ASSERTION_CONSUMER_SERVICE=http://10.128.0.11:8080/interni-sp/login/saml2/sso/internilogs -d kristophjunge/test-saml-idp
+sudo docker run --name=testsamlidp -p 8080:8080 -p 8443:8443 -e SIMPLESAMLPHP_SP_ENTITY_ID=http://10.128.0.11:8080/samlisp/saml2/service-provider-metadata/internilogs -e SIMPLESAMLPHP_SP_ASSERTION_CONSUMER_SERVICE=http://10.128.0.11:8080/samlisp/login/saml2/sso/internilogs -d kristophjunge/test-saml-idp
 
 ed ovviamente sulla macchina dell'ISP  10.128.0.10
 
@@ -53,7 +53,7 @@ Per docker profile la documentazione swagger si trova agli indirizzi:
 
 http://host.docker.internal:8081/interni-sp/swagger-ui/
 
-http://10.128.0.11:8080/interni-sp/swagger-ui/
+http://10.128.0.11:8080/swagger-ui/
  
  
  
