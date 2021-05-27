@@ -40,11 +40,7 @@ public class SwaggerConfig
 					.build();
 		}
 
-//		@Bean
-//		BeanValidatorPluginsConfiguration beanValidatorPluginsConfiguration() {
-//			return new BeanValidatorPluginsConfiguration();
-//		}
-	  
+
 	  
 }
 
