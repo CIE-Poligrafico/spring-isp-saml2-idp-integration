@@ -76,7 +76,7 @@ private static final String HELLO_WORLD_MESSAGE="helloworld.message";
 		public ResponseEntity<List<LogCie>> cielogs(@AuthenticationPrincipal Saml2AuthenticatedPrincipal principal,@RequestParam(value = "cf", required=true)String cf) {
 		
 		 List<LogCie> logs=new ArrayList<>();
-	         if(principal.getAttribute(Constants.EMAIL)!=null &&
+	         if(principal!= null && principal.getAttribute(Constants.EMAIL)!=null &&
 	        		 principal.getAttribute(Constants.EMAIL).size()>0 ) {
 		     String user=(String)principal.getAttribute(Constants.EMAIL).get(0);	 
 			 LogCie log1=LogCie.builder().username(user).cieSerial("serial1").ipAddress("198.8.7.7").userAgent("Mozilla/5.0").
