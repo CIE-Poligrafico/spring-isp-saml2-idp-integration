@@ -3,26 +3,26 @@
 #    active: "docker"
 #---
 
-spring:
-  profiles: docker
-  security:
-    saml2:
-      relyingparty:
-        registration:
-          internilogs:
-            signing:
-              credentials:
-                - private-key-location: "classpath:credentials/private.key"
-                  certificate-location: "classpath:credentials/public.crt"
-            identityprovider:
-              verification:
-                credentials:
-                  - certificate-location: "classpath:credentials/dockeridpcert1.crt"
-              entity-id: http://localhost:8080/simplesaml/saml2/idp/metadata.php
-              singlesignon:
-                sign-request: true
-     
-                url: http://localhost:8080/simplesaml/saml2/idp/SSOService.php
+#spring:
+#  profiles: docker
+#  security:
+#    saml2:
+#      relyingparty:
+#        registration:
+#          internilogs:
+#            signing:
+#              credentials:
+#                - private-key-location: "classpath:credentials/private.key"
+#                  certificate-location: "classpath:credentials/public.crt"
+#            identityprovider:
+#              verification:
+#                credentials:
+#                  - certificate-location: "classpath:credentials/dockeridpcert1.crt"
+#              entity-id: http://localhost:8080/simplesaml/saml2/idp/metadata.php
+#              singlesignon:
+#                sign-request: true
+#     
+#                url: http://localhost:8080/simplesaml/saml2/idp/SSOService.php
               #metadata-uri: http://localhost:8083/auth/realms/master/protocol/saml/descriptor
             #    metadata-uri: http://localhost:8080/simplesaml/saml2/idp/metadata.php
                #https://10.128.0.10:8080/simplesaml/saml2/idp/metadata.php

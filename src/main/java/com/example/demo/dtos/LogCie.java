@@ -8,6 +8,8 @@ import lombok.Data;
 @Data
 @Builder
 public class LogCie {
+	
+	private String username;
 	private String cieSerial;
 	private String idRichiesta;
 	private Date accessTime;

@@ -27,10 +27,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
-<!-- 		<dependency> -->
-<!-- 			<groupId>org.springframework.boot</groupId> -->
-<!-- 			<artifactId>spring-boot-starter-web</artifactId> -->
-<!-- 		</dependency> -->
+
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -42,30 +39,35 @@
 			<version>${org.mapstruct.version}</version>
 		</dependency>
 		<!-- dipendenze di security -->
+		<!-- forse non servem indispensabile se si commenta spring-security-config-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.security.extensions</groupId>
-			<artifactId>spring-security-saml2-core</artifactId>
-			<version>2.0.0.M31</version>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-saml2-service-provider</artifactId>
 		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-config</artifactId>
-		</dependency>
-
+		
+		
+<!-- forse non serve -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.springframework.security.extensions</groupId> -->
+<!-- 			<artifactId>spring-security-saml2-core</artifactId> -->
+<!-- 			<version>2.0.0.M31</version> -->
+<!-- 		</dependency> -->
+		
+	<!-- forse non serve -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.springframework.security</groupId> -->
+<!-- 			<artifactId>spring-security-config</artifactId> -->
+<!-- 		</dependency> -->
+<!-- Indispensabile a thymleaf -->
 		<dependency>
 			<groupId>org.thymeleaf.extras</groupId>
 			<artifactId>thymeleaf-extras-springsecurity5</artifactId>
 		</dependency>
-		<!-- Dipendenze swagger non funziona UI -->
+<!-- 		Dipendenze swagger non funziona UI -->
 
 		<dependency>
 			<groupId>io.springfox</groupId>
@@ -78,17 +80,6 @@
      <artifactId>springfox-swagger-ui</artifactId>
      <version>3.0.0</version>
      </dependency>
-	<!-- queste due creano problemi -->	
-<!-- 		<dependency> -->
-<!--     <groupId>io.springfox</groupId> -->
-<!--     <artifactId>springfox-swagger2</artifactId> -->
-<!--     <version>2.9.2</version> -->
-<!-- </dependency> -->
-<!-- 		<dependency> -->
-<!--     <groupId>io.springfox</groupId> -->
-<!--     <artifactId>springfox-swagger-ui</artifactId> -->
-<!--     <version>2.9.2</version> -->
-<!-- </dependency> -->
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-bean-validators</artifactId>
@@ -96,10 +87,7 @@
 		</dependency>
 		
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
+		
 
 
 		<dependency>
@@ -116,9 +104,9 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<!-- <version>3.8.0</version> -->
 				<configuration>
-
-					<!-- <source>1.8</source> -->
-					<!-- <target>1.8</target> -->
+                        <release>11</release>
+					<source>11</source> 
+					 <target>11</target> 
 
 					<annotationProcessorPaths>
 						<path>
@@ -165,6 +153,16 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+<!--         <dependency> -->
+<!-- 			<groupId>org.springframework.boot</groupId> -->
+<!-- 			<artifactId>spring-boot-starter-actuator</artifactId> -->
+<!-- 		</dependency> -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
     </dependencies>
     </profile>
     <profile>
@@ -172,6 +170,15 @@
     <properties>
         <project.packaging>war</project.packaging>
     </properties>
+    <build>
+    <!-- per cambiare il profilo spring boot creare la cartella ad hoc -->
+    <resources>
+        <resource>
+            <directory>src/main/resources</directory>
+            <filtering>true</filtering>
+        </resource>
+    </resources>
+</build>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -190,6 +197,7 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
+     
 </profile>
 </profiles>
 </project>

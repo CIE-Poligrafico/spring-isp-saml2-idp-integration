@@ -1,9 +1,15 @@
 # spring-isp-saml2-idp-integration
 
+In locale aggiungere la riga nei dns
 
+127.0.0.1 host.docker.internal  e rimuovere tutti i riferimenti host.docker.internal affinchè tomcat possa fare il bind
+
+quindi: ipconfig /flushdns
 Profilo docker(lancio sia Isp che Idp in locale):
 -Lanciare il container Idp con Isp=
 http://host.docker.internal:8081/interni-sp/saml2/service-provider-metadata/internilogs
+
+
 
 mediante il comando:
 
@@ -53,8 +59,18 @@ Per docker profile la documentazione swagger si trova agli indirizzi:
 
 http://host.docker.internal:8081/interni-sp/swagger-ui/
 
+ http://host.docker.internal:8081/interni-sp/actuator
+
 http://10.128.0.11:8080/swagger-ui/
  
- 
+ docker compose up nella cartella microservizi C:\Users\Formazione\workspace-microservizi\elk-stack2\docker-elkstack ricordandosi di dare autorizzazione alle cartelle
+
+Poi 
+
+curl -XGET http://localhost:9200/_license
+curl -X POST "localhost:9200/_license/start_trial?acknowledge=true&pretty"
+curl -XGET http://localhost:9200/_license
+
+..per connettersi da Dbeaver
  
 

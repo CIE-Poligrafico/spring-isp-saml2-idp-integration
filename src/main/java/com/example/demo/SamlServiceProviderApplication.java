@@ -9,7 +9,7 @@ public class SamlServiceProviderApplication {
 
 	public static void main(String[] args) {
 		ConfigurableApplicationContext configurableApplicationContext=	SpringApplication.run(SamlServiceProviderApplication.class, args);
-		configurableApplicationContext.getBean(BaseSignatureTrustEngine.class);
+		
 		
 	}
 

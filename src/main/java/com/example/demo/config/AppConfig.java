@@ -31,15 +31,15 @@ public class AppConfig {
 	MessageSourceAccessor frLocaleMessageSourceAccessor() {
 	return new MessageSourceAccessor(messageSource, Locale.FRANCE);
 	}
-	@EventListener
-	public void handleContextRefresh(ContextRefreshedEvent event) {
-	    ApplicationContext applicationContext = event.getApplicationContext();
-	    RequestMappingHandlerMapping requestMappingHandlerMapping = applicationContext
-	        .getBean("requestMappingHandlerMapping", RequestMappingHandlerMapping.class);
-	    Map<RequestMappingInfo, HandlerMethod> map = requestMappingHandlerMapping
-	        .getHandlerMethods();
-	    map.forEach((key, value) -> log.info("**ENDPOINT EXPOSED KEY_{}****VALUE_ {}*****", key, value));
-	}
+//	@EventListener
+//	public void handleContextRefresh(ContextRefreshedEvent event) {
+//	    ApplicationContext applicationContext = event.getApplicationContext();
+//	    RequestMappingHandlerMapping requestMappingHandlerMapping = applicationContext
+//	        .getBean("requestMappingHandlerMapping", RequestMappingHandlerMapping.class);
+//	    Map<RequestMappingInfo, HandlerMethod> map = requestMappingHandlerMapping
+//	        .getHandlerMethods();
+//	    map.forEach((key, value) -> log.info("**ENDPOINT EXPOSED KEY_{}****VALUE_ {}*****", key, value));
+//	}
 	
 
 }
