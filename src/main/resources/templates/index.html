@@ -13,10 +13,22 @@
         <div>principal.attributes: <span sec:authentication="principal.attributes"></span></div>
 <!--         <div>principal.attributes: <span sec:authentication="principal.attributes"></span></div> -->
 <!--         <div>principal.attributes: <span sec:authentication="principal.attributes"></span></div> -->
-        <div>
+      
+         <div>
             <form th:action="@{/logout}" method="post">
                 <input type="submit" value="Logout" />
             </form>
+            
         </div>
+        
+        <div>
+            <form th:action="@{http://localhost:8080/simplesaml/saml2/idp/SingleLogoutService.php}" method="post">
+                <input type="hidden" NAME="SAMLResponse" VALUE="PHNhbWxwOlJlc3BvbnNlIHhtbG5zOnNhb...Base64 encoded SAML LogoutRequest">
+                <input type="submit" value="SAMLOGOUT" />
+            </form>
+            
+        </div>
+        
+        
     </body>
 </html>
